@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snack Royal Glass Edition</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:Tahoma,sans-serif;
+background:#0f0f0f;
+color:white;
+}
+nav{
+position:fixed;
+top:0;
+width:100%;
+z-index:1000;
+background:rgba(15,15,15,.55);
+backdrop-filter:blur(14px);
+border-bottom:1px solid rgba(255,255,255,.08);
+padding:15px;
+text-align:center;
+}
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-weight:bold;
+}
+header{
+height:90vh;
+background:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.65)),
+url('https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1400&q=80');
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+.hero h1{
+font-size:4rem;
+text-shadow:0 0 25px rgba(255,180,0,.7);
+animation:float 3s ease-in-out infinite;
+}
+.hero p{margin-top:10px}
+.btn{
+display:inline-block;
+margin:10px;
+padding:14px 24px;
+border-radius:40px;
+background:linear-gradient(45deg,#ff7a00,#ffb300);
+color:white;
+text-decoration:none;
+transition:.3s;
+}
+.btn:hover{
+transform:translateY(-4px) scale(1.05);
+}
+.offer{
+background:#ffb300;
+color:black;
+padding:15px;
+font-weight:bold;
+text-align:center;
+}
+.title{
+text-align:center;
+padding:50px 20px 20px;
+}
+.title:after{
+content:'';
+display:block;
+width:90px;
+height:4px;
+background:#ffb300;
+margin:10px auto;
+border-radius:30px;
+}
+.menu{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:24px;
+padding:20px;
+}
+.card{
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,.05);
+border-radius:20px;
+overflow:hidden;
+transition:.35s;
+}
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 30px rgba(255,180,0,.25);
+}
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+transition:.6s;
+}
+.card:hover img{
+transform:scale(1.08);
+}
+.card-content{
+padding:15px;
+}
+.price{
+color:#ffb300;
+font-size:1.4rem;
+font-weight:bold;
+}
+.contact{
+background:#171717;
+padding:40px;
+text-align:center;
+margin-top:40px;
+}
+.whatsapp{
+position:fixed;
+bottom:20px;
+left:20px;
+width:60px;
+height:60px;
+border-radius:50%;
+background:#25D366;
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+font-size:28px;
+box-shadow:0 0 25px rgba(37,211,102,.5);
+}
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+.reveal.active{
+opacity:1;
+transform:none;
+}
+@keyframes float{
+50%{transform:translateY(-10px)}
+}
+</style>
+</head>
+<body>
+
+<nav>
+<a href="#menu">المنيو</a>
+<a href="#contact">التواصل</a>
+</nav>
+
+<header>
+<div class="hero">
+<h1>SNACK ROYAL</h1>
+<p>Pizza • Tacos • Shawarma • Burgers</p>
+<a class="btn" href="https://wa.me/212612345678">اطلب الآن</a>
+<a class="btn" href="tel:+212612345678">اتصل بنا</a>
+</div>
+</header>
+
+<div class="offer">🔥 عرض اليوم: 2 Tacos + Frites + Coca = 69 DH</div>
+
+<h2 id="menu" class="title reveal">قائمة الطعام</h2>
+
+<section class="menu">
+
+<div class="card reveal">
+<img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80">
+<div class="card-content">
+<h3>Pizza Poulet</h3>
+<div class="price">45 DH</div>
+</div>
+</div>
+
+<div class="card reveal">
+<img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=800&q=80">
+<div class="card-content">
+<h3>Tacos Mixte</h3>
+<div class="price">35 DH</div>
+</div>
+</div>
+
+<div class="card reveal">
+<img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=800&q=80">
+<div class="card-content">
+<h3>Shawarma</h3>
+<div class="price">25 DH</div>
+</div>
+</div>
+
+<div class="card reveal">
+<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80">
+<div class="card-content">
+<h3>Royal Burger</h3>
+<div class="price">40 DH</div>
+</div>
+</div>
+
+</section>
+
+<div id="contact" class="contact">
+<h2>تواصل معنا</h2><br>
+<p>📞 +212 612345678</p><br>
+<p>📸 @royalsnack</p>
+</div>
+
+<a class="whatsapp" href="https://wa.me/212612345678">💬</a>
+
+<script>
+function reveal(){
+document.querySelectorAll('.reveal').forEach(el=>{
+if(el.getBoundingClientRect().top < window.innerHeight-80){
+el.classList.add('active');
+}
+});
+}
+window.addEventListener('scroll',reveal);
+reveal();
+</script>
+
+</body>
+</html>
